@@ -1,2 +1,2 @@
-# DIS-Client
-DIS Project's Client Repository
+# Frontend
+DSM-DIS Frontend Repository
