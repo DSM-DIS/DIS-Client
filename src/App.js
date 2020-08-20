@@ -1,12 +1,15 @@
-import React from "react";
-import { mainWrapper } from "./App.css";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routing from './Routing';
+import { GlobalStyle } from './GlobalStyle';
 
 const App = () => {
-  return (
-    <div className={mainWrapper}>
-      <h1>Hello, Webpack!!! with React</h1>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<GlobalStyle />
+			<Routing />
+		</BrowserRouter>
+	);
 };
 
 export default App;
