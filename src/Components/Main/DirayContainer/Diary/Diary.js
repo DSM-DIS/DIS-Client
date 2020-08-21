@@ -4,8 +4,6 @@ import * as S from './styles';
 const Diary = (props) => {
 	const { mode } = props;
 
-	console.log(mode);
-
 	return (
 		<S.Container>
 			{mode === 'init' ? (
