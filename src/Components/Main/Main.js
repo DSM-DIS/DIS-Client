@@ -1,8 +1,10 @@
 import React from 'react';
 import * as S from './styles';
+import * as M from '../Modal/styles';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import DirayContainer from './DirayContainer/DirayContainer';
+import Modal from '../Modal/Modal';
 const Main = () => {
 	return (
 		<S.Container>
@@ -16,6 +18,9 @@ const Main = () => {
 				<DirayContainer />
 			</S.MainWrap>
 			<Footer />
+			<Modal>
+				<M.MainModal></M.MainModal>
+			</Modal>
 		</S.Container>
 	);
 };
