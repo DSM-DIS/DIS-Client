@@ -1,28 +1,32 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+	position: fixed;
 	display: flex;
-	width: 100%;
+	width: calc(100% - 100px);
 	height: 80px;
+	padding: 0 50px;
 	background: white;
-	justify-content: center;
+	box-shadow: 0px -10px 15px 4px rgba(191, 191, 191, 1);
+	align-items: center;
+	justify-content: space-between;
 `;
 
 export const HeaderLogo = styled.div`
 	display: flex;
-	position: absolute;
-	left: 24px;
-	width: 123px;
-	height: 56px;
+	height: auto;
 	color: #f76d6d;
 	font-size: 50px;
 	font-weight: bold;
+	align-items: center;
+	justify-content: center;
 `;
 
 export const HeaderButtonWrap = styled.div`
 	display: flex;
-	position: absolute;
-	right: 66px;
+	width: 283px;
+	align-items: center;
+	justify-content: space-between;
 `;
 
 export const HeaderButton = styled.button`
@@ -35,6 +39,16 @@ export const HeaderButton = styled.button`
 	border: 4px solid #ff9d9d;
 	border-radius: 49px;
 	background: white;
-	align-content: center;
+	align-items: center;
 	justify-content: center;
+	box-sizing: border-box;
+
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		cursor: pointer;
+		background: #ff9d9d;
+		color: white;
+		border: 0px;
+	}
 `;
