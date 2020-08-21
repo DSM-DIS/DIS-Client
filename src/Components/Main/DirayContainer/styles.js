@@ -6,4 +6,5 @@ export const Container = styled.div`
 	padding: 95px;
 	background: #17202e;
 	flex-wrap: wrap;
+	justify-content: space-between;
 `;
