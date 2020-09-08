@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
 	position: fixed;
 	display: flex;
-	top: 0;
+	top: 80px;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - 80px);
 	background: rgba(0, 0, 0, 0.81);
 `;
 
@@ -16,44 +16,93 @@ export const Modal = styled.div`
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	border-radius: 20px;
+	padding: 80px 50px 60px 50px;
+	border-radius: 30px;
 	background: white;
-`;
-
-export const MainModal = styled(Modal)`
-	display: flex;
-	width: 694px;
-	height: 353px;
 	flex-direction: column;
 `;
 
-export const ModalTitle = styled.div`
+export const ModalCloseBtn = styled.div`
+	position: absolute;
 	display: flex;
-	width: 100%;
-	justify-content: center;
+	top: 20px;
+	right: 20px;
+	width: 39px;
+	height: 39px;
+	background: url('../../../src/asset/ModalCloseBtn.png') no-repeat;
 `;
 
-export const MainModalWrap = styled.div`
-	display: flex;
-	height: 65px;
-	justify-content: space-between;
-`;
+// export const MainModal = styled(Modal)`
+// 	display: flex;
+// 	padding: 50px 50px;
+// 	align-items: center;
+// 	justify-content: space-around;
+// 	flex-direction: column;
+// `;
 
-export const ModalOKBtn = styled.button`
-	display: flex;
-	height: 65px;
-	width: 106px;
-	border-radius: 15px;
-	background: #8b8b8b;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	justify-content: center;
-`;
+// export const ModalTitle = styled.div`
+// 	display: flex;
+// 	width: 100%;
+// 	justify-content: center;
+// `;
 
-export const ModalInput = styled(ModalOKBtn)`
-	width: 447px;
-	background: #f3f3f3;
-	color: #4f4d4d;
-	font-size: 25px;
-`;
+// export const MainModalWrap = styled.div`
+// 	position: relative;
+// 	display: flex;
+// 	height: 65px;
+// 	width: 580px;
+// 	justify-content: space-between;
+// `;
+
+// export const ModalOKBtn = styled.button`
+// 	display: flex;
+// 	height: 65px;
+// 	width: 106px;
+// 	border: none;
+// 	border-radius: 15px;
+// 	background: #8b8b8b;
+// 	color: white;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// 	align-items: center;
+// 	justify-content: center;
+
+// 	transition: all 0.3s ease-in-out;
+
+// 	&:hover {
+// 		cursor: pointer;
+// 		background: #4b4b4b;
+// 	}
+
+// 	&:active {
+// 		background: #6b6b6b;
+// 	}
+// `;
+
+// export const ModalInput = styled(ModalOKBtn)`
+// 	width: 411px;
+// 	padding: 0 18px;
+// 	background: #f3f3f3;
+// 	color: #4f4d4d;
+// 	font-size: 25px;
+
+// 	border: 1px solid #ff0000;
+
+// 	&:hover {
+// 		cursor: auto;
+// 		background: #f3f3f3;
+// 	}
+
+// 	&:active {
+// 		background: #f3f3f3;
+// 	}
+
+// 	${(props) =>
+// 		props.error
+// 			? css`
+// 					&::placeholder {
+// 						color: #c6c6c6;
+// 					}
+// 			  `
+// 			: ''}
+// `;
