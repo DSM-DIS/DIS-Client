@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as M from '../Modal/styles';
 
 export const Container = styled.div`
 	display: flex;
@@ -38,5 +37,3 @@ export const UserName = styled.div`
 	font-size: 50px;
 	font-weight: bold;
 `;
-
-// export const
