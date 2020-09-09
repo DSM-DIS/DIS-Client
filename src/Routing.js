@@ -1,8 +1,13 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Main from './Components/Main/Main';
 
 const Routing = () => {
-	return <Switch></Switch>;
+	return (
+		<Switch>
+			<Route path="/main" component={Main} />
+		</Switch>
+	);
 };
 
 export default Routing;
