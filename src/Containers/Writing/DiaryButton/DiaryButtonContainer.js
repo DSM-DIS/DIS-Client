@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Write/Diary/DiaryButton/DiaryButton";
+import Button from "../../../Components/Writing/Diary/DiaryButton/DiaryButton";
 
 const DiaryButtonContainer = () => {
   return <Button />;

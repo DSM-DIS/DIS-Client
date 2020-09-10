@@ -1,5 +1,5 @@
 import React from "react";
-import Backward from "../../Write/Backward/Backward";
+import Backward from "../../../Components/Writing/Backward/Backward";
 
 const BackwardContainer = () => {
   return <Backward />;
