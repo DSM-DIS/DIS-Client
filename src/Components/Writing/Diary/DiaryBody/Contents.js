@@ -4,9 +4,9 @@ import * as S from "./style";
 const Contents = () => {
   return (
     <S.ContentWarpper>
-      <S.ContentBox>
+      <S.ContentForm>
         <S.TextContent />
-      </S.ContentBox>
+      </S.ContentForm>
       <S.ButtonWrapper>
         <S.Button>UP</S.Button>
         <S.Button>DOWN</S.Button>
