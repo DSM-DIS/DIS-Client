@@ -3,7 +3,7 @@ import * as S from "./style";
 
 const location =
   "(34111)대전광역시 유성구 가정북로 76(장동 23-9) 대덕소프트웨어마이스터고등학교";
-const FooterAds = "일기가 쓰고 싶을 땐? 언제나 다이스(DIARY STORY)와 함께!";
+const FooterAds = "일기가 쓰고 싶을 땐?\n언제나 다이스(DIARY STORY)와 함께!";
 
 const Footer = () => {
   return (
