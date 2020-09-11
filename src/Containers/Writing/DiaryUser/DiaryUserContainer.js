@@ -1,8 +1,7 @@
-import React from "react";
-import CurrentUser from "../../../Components/Writing/Diary/DiaryUser/CurrentUser";
-
+import React from 'react';
+import CurrentUser from '../../../Components/Writing/Diary/DiaryUser/CurrentUser';
 const CurrentUserContainer = () => {
-  return <CurrentUser />;
+	return <CurrentUser />;
 };
 
 export default CurrentUserContainer;

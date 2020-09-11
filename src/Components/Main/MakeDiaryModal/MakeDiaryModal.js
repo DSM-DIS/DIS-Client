@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import Modal from '../../Modal/Modal';
 import * as S from './styles';
 
-const MakeDiaryModal = () => {
+const MakeDiaryModal = (props) => {
+	const { onModalClick } = props;
+
 	const [error, setError] = useState({
 		state: true,
 		message: 'Error',
 	});
 
 	return (
-		<Modal>
+		<Modal onModalClick={onModalClick}>
 			<S.ModalTitle>일기장 생성</S.ModalTitle>
 			<S.ModalForm>
 				<S.ModalInput error={error.state} placeholder={`일기장 이름`} />

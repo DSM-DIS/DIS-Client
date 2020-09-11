@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	position: fixed;
+	/* position: fixed; */
 	display: flex;
 	z-index: 2;
 	width: calc(100% - 100px);
