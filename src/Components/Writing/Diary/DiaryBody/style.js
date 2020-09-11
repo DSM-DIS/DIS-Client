@@ -11,7 +11,7 @@ export const ContentWarpper = styled.div`
   align-items: center;
 `;
 
-export const ContentBox = styled.div`
+export const ContentForm = styled.form`
   display: flex;
   width: 900px;
   height: 460px;
