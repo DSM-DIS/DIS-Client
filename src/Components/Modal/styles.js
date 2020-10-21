@@ -30,6 +30,10 @@ export const ModalCloseBtn = styled.div`
 	width: 39px;
 	height: 39px;
 	background: url('../../../src/asset/ModalCloseBtn.png') no-repeat;
+
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 // export const MainModal = styled(Modal)`
