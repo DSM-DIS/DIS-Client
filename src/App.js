@@ -1,17 +1,13 @@
 import React from 'react';
 import Routing from './Routing';
 import { GlobalStyle } from './GlobalStyle';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import WritingContainer from './Containers/Writing/WritingContainer';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<BrowserRouter>
 			<GlobalStyle />
 			<Routing />
-			<Switch>
-				<Route path="/writing" component={WritingContainer} />
-			</Switch>
 		</BrowserRouter>
 	);
 };
