@@ -22,8 +22,8 @@ const MakeDiaryModal = (props) => {
 			)}
 			<S.ModalMessageForm>
 				<S.ModalMessageCol>
-					최대 교환가능한 인원은{' '}
-					<S.ModalMessageBold>{`3명`}</S.ModalMessageBold> 입니다.
+					최대 교환가능한 인원은 <S.ModalMessageBold>{`명`}</S.ModalMessageBold>{' '}
+					입니다.
 				</S.ModalMessageCol>
 				<S.ModalMessageCol>
 					일기는
