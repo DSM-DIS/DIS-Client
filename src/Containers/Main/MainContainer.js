@@ -1,10 +1,14 @@
 import React from 'react';
-import Main from '../../Components/Main/Main';
-
+import FooterContainer from './FooterContainer/FooterContainer';
+import HeaderContainer from './HeaderContainer/HeaderContainer';
+import DrawerContainer from './DrawerContainer/DrawerContainer';
 const MainContainer = () => {
 	return (
 		<>
-			<Main />
+			{/* <Main /> */}
+			<HeaderContainer />
+			<DrawerContainer />
+			<FooterContainer />
 		</>
 	);
 };
