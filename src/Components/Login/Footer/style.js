@@ -27,6 +27,7 @@ export const FooterFunctionsDiv = styled.div`
   display: flex;
   padding-left: 100px;
   padding-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const FooterFunctions = styled.h2`
