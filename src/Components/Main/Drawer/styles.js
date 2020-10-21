@@ -1,7 +1,9 @@
+import styled from 'styled-components';
+
 export const MainWrap = styled.div`
 	display: flex;
 	width: 100%;
-	margin: 80px 0 130px 0;
+	margin: 0px 0 130px 0;
 	flex-direction: column;
 `;
 

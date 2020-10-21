@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './styles.js';
+import DiaryWrap from './DirayWrap/DirayWrap';
 
 const Drawer = () => {
 	return (
