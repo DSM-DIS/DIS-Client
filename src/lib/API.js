@@ -1,5 +1,3 @@
-export const BASE_URL = 'https://DIaryStory.com';
-
 export const DIARY_SEVICE = {
 	GET_DIARY_PAGE: (id, page) => {
 		return `/diary-book/${id}/diary/${page}`;
