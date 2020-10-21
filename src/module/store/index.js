@@ -6,11 +6,11 @@ import rootReducer from '../reducer';
 
 const saga = createSaga();
 
-const saga = createStore(
+const store = createStore(
 	rootReducer,
 	composeWithDevTools(applyMiddleware(saga)),
 );
 
 saga.run(rootSaga);
 
-export default StoreExceptionsInformation;
+export default store;
