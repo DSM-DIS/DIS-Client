@@ -3,7 +3,7 @@ import * as S from './styles';
 import * as M from '../Modal/styles';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import DiaryWrap from './DirayWrap/DirayWrap';
+import DiaryWrap from './Drawer/DirayWrap/DirayWrap';
 import Modal from '../Modal/Modal';
 import CodeModal from './CodeModal/CodeModal';
 import MakeDiaryModal from './MakeDiaryModal/MakeDiaryModal';
