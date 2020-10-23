@@ -73,3 +73,27 @@ export const SubText = styled.p`
 	font-size: 30px;
 	text-align: center;
 `;
+
+export const RedirectBtn = styled.a`
+	position: absolute;
+	display: flex;
+	width: 162px;
+	height: 48px;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: bold;
+	border: 4px solid #ffffff;
+	border-radius: 34px;
+	background: #ff9d9d;
+	align-items: center;
+	justify-content: center;
+
+	right: 50px;
+	bottom: 20px;
+
+	&:hover {
+		color: #ff9d9d;
+		background: #ffffff;
+	}
+	transition: all 0.3s ease-in-out;
+`;

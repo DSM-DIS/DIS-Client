@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 
 const NotFound = () => {
@@ -10,6 +11,9 @@ const NotFound = () => {
 				<S.BorderText>Page Not Found</S.BorderText>
 				<S.SubText>This page you're looking for doesn't exist or an other error occured.</S.SubText>
 			</S.ErrorWrap>
+			<S.RedirectBtn to="/" as={Link}>
+				Go Home
+			</S.RedirectBtn>
 		</S.Container>
 	);
 };
