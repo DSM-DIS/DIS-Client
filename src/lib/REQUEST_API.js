@@ -1,24 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
 
-const BASE_URL = 'https://DIaryStory.com';
+const BASE_URL = "https://DIaryStory.com";
 
-const ACCESS_TOKEN_NAME = 'Authorization';
-const ACCESS_TOKEN = 'accessToken';
-const REFRESH_TOKEN = 'refreshToken';
+const ACCESS_TOKEN_NAME = "Authorization";
+const ACCESS_TOKEN = "accessToken";
+const REFRESH_TOKEN = "refreshToken";
 
 export const methodType = {
-	GET: 'get',
-	POST: 'post',
-	PUT: 'put',
-	PATCH: 'patch',
+	GET: "get",
+	DELETE: "delete",
+	POST: "post",
+	PUT: "put",
+	PATCH: "patch",
 };
 
-export const requestApiWithBodyWithoutToken = async (
-	method,
-	url,
-	body,
-	header,
-) => {
+export const requestApiWithBodyWithoutToken = async (method, url, body, header) => {
 	try {
 		const res = await axios[method](BASE_URL + url, body, {
 			...header,
@@ -28,11 +24,7 @@ export const requestApiWithBodyWithoutToken = async (
 	}
 };
 
-export const requestApiWithoutBodyWithoutToken = async (
-	method,
-	url,
-	header,
-) => {
+export const requestApiWithoutBodyWithoutToken = async (method, url, header) => {
 	try {
 		const res = await axios[method](BASE_URL + url, {
 			...header,
@@ -59,12 +51,7 @@ export const requestApiWithoutBodyWithToken = async (method, url, header) => {
 	}
 };
 
-export const requestApiWithBodyWithToken = async (
-	method,
-	url,
-	body,
-	header,
-) => {
+export const requestApiWithBodyWithToken = async (method, url, body, header) => {
 	try {
 		const accessToken = window.localStorage.getItem(ACCESS_TOKEN);
 
@@ -81,13 +68,11 @@ export const requestApiWithBodyWithToken = async (
 
 export const Logout = () => {
 	try {
-		!!window.localStorage.getItem(ACCESS_TOKEN) &&
-			window.localStorage.removeItem(ACCESS_TOKEN);
-		!!window.localStorage.getItem(REFRESH_TOKEN) &&
-			window.localStorage.removeItem(REFRESH_TOKEN);
+		!!window.localStorage.getItem(ACCESS_TOKEN) && window.localStorage.removeItem(ACCESS_TOKEN);
+		!!window.localStorage.getItem(REFRESH_TOKEN) && window.localStorage.removeItem(REFRESH_TOKEN);
 	} catch (error) {
 		console.log(error);
 	} finally {
-		window.location.href('/');
+		window.location.href("/");
 	}
 };
