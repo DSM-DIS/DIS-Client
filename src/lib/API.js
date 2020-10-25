@@ -2,8 +2,17 @@ export const DIARY_SEVICE = {
 	GET_DIARY_PAGE: (id, page) => {
 		return `/diary-book/${id}/diary/${page}`;
 	},
-	CREATE_NEW_DIARY: (id) => {
+	CREATE_NEW_DIARY_PAGE: (id) => {
 		return `/diary-book/${id}/diary`;
+	},
+	GET_DIARY_BOOK_LIST: () => {
+		return `/user/diary-books`;
+	},
+	CREATE_NEW_DIARY_BOOK: () => {
+		return `/diary-book`;
+	},
+	JOIN_DIARY_BOOK_BY_CODE: () => {
+		return `/diary-book/participaint`;
 	},
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../../Components/Writing/Diary/DiaryButton/DiaryButton";
+import Button from "../../../components/writing/Diary/DiaryButton/DiaryButton";
 
 const DiaryButtonContainer = () => {
-  return <Button />;
+	return <Button />;
 };
 
 export default DiaryButtonContainer;
