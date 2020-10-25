@@ -1,8 +1,8 @@
 import React from "react";
-import Contents from "../../../Components/Writing/Diary/DiaryBody/Contents";
+import Contents from "../../../components/writing/Diary/DiaryBody/Contents";
 
 const DiaryBodyContainer = () => {
-  return <Contents />;
+	return <Contents />;
 };
 
 export default DiaryBodyContainer;

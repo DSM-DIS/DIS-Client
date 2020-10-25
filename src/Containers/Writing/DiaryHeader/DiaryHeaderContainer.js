@@ -1,8 +1,8 @@
 import React from "react";
-import DiaryHeader from "../../../Components/Writing/Diary/DiaryHeader/Header";
+import DiaryHeader from "../../../components/writing/Diary/DiaryHeader/Header";
 
 const DiaryHeaderContainer = () => {
-  return <DiaryHeader />;
+	return <DiaryHeader />;
 };
 
 export default DiaryHeaderContainer;
