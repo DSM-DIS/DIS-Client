@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import diaryListReducer from "../reducer/diary_list";
+import diaryListReducer from "../redux/diary_list";
 
 const rootReducer = combineReducers({
 	diaryListReducer,

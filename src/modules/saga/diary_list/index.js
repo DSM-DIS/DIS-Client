@@ -1,7 +1,7 @@
 import { put, takeEvery } from "redux-saga/effects";
 import { DIARY_SEVICE } from "../../../lib/API";
 import { methodType, requestApiWithoutBodyWithToken } from "../../../lib/REQUEST_API";
-import { GET_DIARY_BOOK_LIST_SAGA, SET_DIARY_BOOK_LIST } from "../../action/diary_list";
+import { GET_DIARY_BOOK_LIST_SAGA, SET_DIARY_BOOK_LIST } from "../../redux/diary_list/index";
 
 function* getDiaryBookListSaga() {
 	try {
