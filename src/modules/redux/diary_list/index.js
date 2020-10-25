@@ -7,11 +7,6 @@ export const setDiaryBookList = (payload) => ({
 	payload,
 });
 
-export const getDiaryBookListSaga = (payload) => ({
-	type: GET_DIARY_BOOK_LIST_SAGA,
-	payload,
-});
-
 const initialState = {
 	diaryList: [],
 };
