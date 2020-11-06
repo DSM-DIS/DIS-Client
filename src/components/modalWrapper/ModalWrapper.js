@@ -5,17 +5,20 @@ const ModalWrapper = (props) => {
 	const { modalData } = props;
 	const { ModalOff } = props;
 
-	const { Modal, show } = modalData;
-
+	const { isShow, modalElement } = modalData;
+	const Modal = modalElement;
 	const PreventModalOff = (e) => {
 		e.stopPropagation();
 	};
 
+	console.log("components/ModalWrappper : Modal");
+	console.log(Modal);
+
 	return (
 		<>
-			{show && (
+			{isShow && (
 				<S.Container onClick={ModalOff}>
-					<Modal PreventModalOff={PreventModalOff} ModalOff={ModalOff}></Modal>
+					{Modal && <Modal PreventModalOff={PreventModalOff} ModalOff={ModalOff} />}
 				</S.Container>
 			)}
 		</>
