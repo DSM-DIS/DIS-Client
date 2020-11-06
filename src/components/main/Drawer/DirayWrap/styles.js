@@ -1,10 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-	display: flex;
-	width: calc(100% - 190px);
-	padding: 95px 95px 60px 95px;
+	display: grid;
+	width: calc(100% - 100px);
+	padding: 50px;
 	background: #17202e;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 `;
