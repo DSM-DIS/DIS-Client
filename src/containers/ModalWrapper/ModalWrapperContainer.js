@@ -7,7 +7,7 @@ const ModalWrapperContainer = () => {
 	const modalData = useSelector((state) => state.modal);
 
 	const dispatch = useDispatch();
-	const ModalOff = useCallback(() => dispatch(dropModal), [dispatch]);
+	const ModalOff = useCallback(() => dispatch(dropModal()), [dispatch]);
 
 	return <ModalWrapper modalData={modalData} ModalOff={ModalOff} />;
 };
