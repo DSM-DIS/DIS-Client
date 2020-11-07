@@ -1,7 +1,7 @@
 import React from "react";
-import Modal from "../modal/Modal";
-import ModalHeader from "../modal/modalHeader/ModalHeader";
-import ModalCloseBtn from "../modalCloseBtn/ModalCloseBtn";
+import Modal from "../../modal/Modal";
+import ModalHeader from "../../modalHeader/ModalHeader";
+import ModalCloseBtn from "../../modalCloseBtn/ModalCloseBtn";
 
 const CodeModal = () => {
 	return (
