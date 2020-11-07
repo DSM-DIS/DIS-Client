@@ -4,7 +4,11 @@ import * as S from "./styles";
 const ModalForm = (props) => {
 	const { children } = props;
 
-	return <S.Container>{children}</S.Container>;
+	const onSubmit = (e) => {
+		e.preventDefault();
+	};
+
+	return <S.Container onSubmit={(e) => onSubmit(e)}>{children}</S.Container>;
 };
 
 export default ModalForm;
