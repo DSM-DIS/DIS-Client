@@ -7,22 +7,11 @@ const ModalWrapper = (props) => {
 
 	const { isShow, modalElement } = modalData;
 	const Modal = modalElement;
-	const PreventModalOff = (e) => {
-		e.stopPropagation();
-	};
 
 	console.log("components/ModalWrappper : Modal");
 	console.log(Modal);
 
-	return (
-		<>
-			{isShow && (
-				<S.Container onClick={ModalOff}>
-					{Modal && <Modal PreventModalOff={PreventModalOff} ModalOff={ModalOff} />}
-				</S.Container>
-			)}
-		</>
-	);
+	return <>{isShow && <S.Container onClick={ModalOff}>{Modal && <Modal />}</S.Container>}</>;
 };
 
 export default ModalWrapper;
