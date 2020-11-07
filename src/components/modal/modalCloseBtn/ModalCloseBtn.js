@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useCallback } from "react";
 import * as S from "./styles";
-import modalCloseBtn from "../../../asset/index";
 import { useDispatch } from "react-redux";
+import { dropModal } from "../../../modules/redux/modal";
 
 const ModalCloseBtn = () => {
 	const dispatch = useDispatch();
 	const ModalOff = useCallback(() => dispatch(dropModal()), [dispatch]);
 
-	return <S.Container onClick={ModalOff} img={modalCloseBtn}></S.Container>;
+	const { default: img } = require("../../../asset/modal/modalCloseBtn.svg");
+
+	return <S.Container onClick={ModalOff} img={img} />;
 };
 
 export default ModalCloseBtn;

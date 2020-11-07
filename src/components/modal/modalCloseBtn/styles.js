@@ -7,7 +7,8 @@ export const Container = styled.button`
 	right: 20px;
 	width: 39px;
 	height: 39px;
-	background: ${(props) => `url(${props.modalCloseBtn}) no-repeat`};
+	border: none;
+	background: ${(props) => `url(${props.img}) no-repeat`};
 
 	&:hover {
 		cursor: pointer;
