@@ -1,41 +1,49 @@
-const webpack = require("webpack");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const port = 3000;
 
 module.exports = {
-	mode: "development",
-	entry: ["babel-polyfill", "./src/index.js"],
-	output: {
-		path: __dirname + "/dist",
-		filename: "bundle.[hash].js",
-		publicPath: "/",
+	entry: {
+		app: ["babel-polyfill", "./src/index.js"],
+	},
+	resolve: {
+		extensions: [".js"],
 	},
 	module: {
 		rules: [
-			//
-			// 첫 번째 룰
 			{
-				test: /\.(js)$/,
-				exclude: /node_modules/,
-				use: ["babel-loader"],
+				test: /\.jsx?$/,
+				loader: "babel-loader",
+				options: {
+					presets: ["@babel/preset-env", "@babel/preset-react"],
+					plugins: ["@babel/plugin-proposal-class-properties"],
+				},
 			},
-			// 두 번째 룰
 			{
-				test: /\.css$/,
-				use: [
-					{
-						loader: "style-loader",
-					},
-					{
-						loader: "css-loader",
-						options: {
-							modules: true,
-						},
-					},
-				],
+				test: /\.(jpg|png|jpeg|bmp|gif|svg|ico)?$/,
+				loader: "file-loader",
 			},
+			// {
+			// 	test: /\.css$/,
+			// 	use: [
+			// 		{
+			// 			loader: "style-loader",
+			// 		},
+			// 		{
+			// 			loader: "css-loader",
+			// 			options: {
+			// 				modules: true,
+			// 			},
+			// 		},
+			// 	],
+			// },
 		],
+	},
+	output: {
+		publicPath: "/",
+		path: path.join(__dirname + "/dist"),
+		filename: "bundle.[hash].js",
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -45,7 +53,7 @@ module.exports = {
 	devServer: {
 		host: "localhost",
 		port: port,
-		open: true,
+		// open: true,
 		historyApiFallback: true,
 		hot: true,
 	},

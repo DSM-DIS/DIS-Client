@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import diaryListReducer from "../redux/diary_list";
+import diaryList from "../redux/diary_list";
+import modal from "../redux/modal";
 
 const rootReducer = combineReducers({
-	diaryListReducer,
+	diaryList,
+	modal,
 });
 
 export default rootReducer;

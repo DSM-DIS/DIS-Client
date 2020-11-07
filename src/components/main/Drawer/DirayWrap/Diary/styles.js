@@ -1,10 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
 	display: flex;
-	width: 242px;
-	height: 383px;
-	margin: 50px 0;
+	height: 280px;
+	margin: 30px;
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
@@ -13,19 +12,19 @@ export const Container = styled.div`
 export const DiaryShape = styled.div`
 	display: flex;
 	width: 100%;
-	height: 206px;
-	padding: 51px 0;
+	min-height: 180px;
+	padding: 30px 0;
 	border-radius: 20px;
-	background: ${(props) => (props.mode === 'init' ? '#efefef' : 'white')};
+	background: ${(props) => (props.mode === "init" ? "#efefef" : "white")};
 	color: #333333;
-	font-size: 50px;
+	font-size: 35px;
 	justify-content: center;
 
 	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		cursor: pointer;
-		transform: scale(1.1);
+		transform: scale(1.03);
 	}
 `;
 
