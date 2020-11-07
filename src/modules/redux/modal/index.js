@@ -10,11 +10,11 @@ export const dropModal = () => ({
 });
 
 const initialState = {
-	isShow: false,
+	isShow: true,
 	modalElement: null,
 };
 
-export default modalReducer = (state = initialState, action) => {
+const modalReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case SHOW_MODAL: {
 			return {
@@ -35,3 +35,5 @@ export default modalReducer = (state = initialState, action) => {
 		}
 	}
 };
+
+export default modalReducer;
