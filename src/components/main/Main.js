@@ -1,42 +1,10 @@
-import React, { useState } from 'react';
-import * as S from './styles';
-import * as M from '../Modal/styles';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import DiaryWrap from './Drawer/DirayWrap/DirayWrap';
-import Modal from '../Modal/Modal';
-import CodeModal from './CodeModal/CodeModal';
-import MakeDiaryModal from './MakeDiaryModal/MakeDiaryModal';
+import React from "react";
+import * as S from "./styles";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import DiaryWrap from "./Drawer/DirayWrap/DirayWrap";
 
 const Main = () => {
-	const [modal, setModal] = useState({
-		code: false,
-		diary: true,
-	});
-
-	const [error, setError] = useState({
-		error: true,
-		message: 'error message',
-	});
-
-	const onModalClick = (modalState) => {
-		if (modalState === 'all') {
-			setModal({ code: false, diary: false });
-		} else {
-			modalState === 'code'
-				? setModal({ code: !modal.code, diary: false })
-				: setModal({ code: false, diary: !modal.diary });
-		}
-	};
-
-	const checkCodeModal = () => {
-		onModalClick('code');
-	};
-
-	const checkDiaryModal = () => {
-		onModalClick('diary');
-	};
-
 	return (
 		<S.Container>
 			<Header />
@@ -49,8 +17,6 @@ const Main = () => {
 				<DiaryWrap />
 			</S.MainWrap>
 			<Footer />
-			{/* {modal.code && <CodeModal onModalClick={checkCodeModal} />} */}
-			{modal.diary && <MakeDiaryModal onModalClick={checkDiaryModal} />}
 		</S.Container>
 	);
 };
