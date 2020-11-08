@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "../Modal";
-import ModalHeader from "../../modalHeader/ModalHeader";
+import ModalHeader from "../../ModalHeader/ModalHeader";
 import ModalCloseBtn from "../../ModalCloseBtn/ModalCloseBtn";
 import DiaryModalForm from "../../ModalForm/DiaryModalForm/DiaryModalForm";
 import DiaryModalFooter from "../../ModalFooter/DiaryModalFooter/DiaryModalFooter";
