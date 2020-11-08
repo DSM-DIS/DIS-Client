@@ -7,7 +7,7 @@ export const Container = styled.input`
 	color: #4f4d4d;
 	font-size: 25px;
 	font-weight: bold;
-	border: none;
+	border: ${(props) => (props.error ? "1px solid #FF0000" : "none")};
 	border-radius: 15px;
 	background: #f3f3f3;
 	box-sizing: border-box;
