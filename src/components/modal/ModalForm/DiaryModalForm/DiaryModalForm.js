@@ -4,13 +4,10 @@ import ModalForm from "../ModalForm";
 import ModalFormBtn from "../ModalFormBtn/ModalFormBtn";
 import ModalFormInput from "../ModalFormInput/ModalFormInput";
 import ModalFormLabel from "../ModalFormLabel/ModalFormLabel";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const DiaryModalForm = () => {
 	const error = useSelector((state) => state.modal.error);
-
-	console.log("DiaryModalForm : error");
-	console.log(error);
 
 	return (
 		<ModalForm>
