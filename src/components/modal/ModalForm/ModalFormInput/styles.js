@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.input`
 	display: flex;
-	width: 65%;
+	width: 75%;
 	padding: 18px;
 	color: #4f4d4d;
 	font-size: 25px;
