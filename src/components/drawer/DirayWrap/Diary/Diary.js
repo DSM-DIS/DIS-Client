@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { showModal } from "../../../../../modules/redux/modal";
-import DiaryModal from "../../../../modal/Modal/DiaryModal/DiaryModal";
+import { showModal } from "../../../../modules/redux/modal";
+import DiaryModal from "../../../modal/Modal/DiaryModal/DiaryModal";
 import * as S from "./styles";
 
 const Diary = (props) => {
