@@ -1,5 +1,5 @@
-import React from 'react';
-import Drawer from '../../../Components/Main/Drawer/Drawer';
+import React from "react";
+import Drawer from "../../../components/drawer/Drawer";
 
 const DrawerContainer = () => {
 	return <Drawer />;

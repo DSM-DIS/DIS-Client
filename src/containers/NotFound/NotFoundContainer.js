@@ -1,5 +1,5 @@
 import React from "react";
-import NotFound from "../../Components/NotFound/NotFound";
+import NotFound from "../../components/notFound/NotFound";
 
 const NotFoundContainer = () => {
 	return <NotFound />;

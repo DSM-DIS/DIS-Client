@@ -2,11 +2,11 @@ import React from "react";
 import * as S from "./styles";
 
 const ModalHeader = (props) => {
-	const { text, color, font_size, font_weight } = props;
+	const { text, color, fontSize, fontWeight } = props;
 
 	return (
 		<S.Container>
-			<S.Text color={color} font_size={font_size} font_weight={font_weight}>
+			<S.Text color={color} fontSize={fontSize} fontWeight={fontWeight}>
 				{text}
 			</S.Text>
 		</S.Container>

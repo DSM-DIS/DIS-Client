@@ -9,6 +9,6 @@ export const Container = styled.div`
 
 export const Text = styled.p`
 	color: ${(props) => (props.color ? props.color : "#000000")};
-	font-size: ${(props) => (props.font_size ? props.font_size : "50px")};
-	font-weight: ${(props) => (props.font_weight ? props.font_weight : "bold")};
+	font-size: ${(props) => (props.fontSize ? props.fontSize : "50px")};
+	font-weight: ${(props) => (props.fontWeight ? props.fontWeight : "bold")};
 `;

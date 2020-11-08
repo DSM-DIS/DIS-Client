@@ -24,20 +24,20 @@ module.exports = {
 				test: /\.(jpg|png|jpeg|bmp|gif|svg|ico)?$/,
 				loader: "file-loader",
 			},
-			// {
-			// 	test: /\.css$/,
-			// 	use: [
-			// 		{
-			// 			loader: "style-loader",
-			// 		},
-			// 		{
-			// 			loader: "css-loader",
-			// 			options: {
-			// 				modules: true,
-			// 			},
-			// 		},
-			// 	],
-			// },
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: "style-loader",
+					},
+					{
+						loader: "css-loader",
+						options: {
+							modules: true,
+						},
+					},
+				],
+			},
 		],
 	},
 	output: {
