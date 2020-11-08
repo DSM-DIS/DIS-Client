@@ -12,10 +12,10 @@ const DiaryModalForm = () => {
 	return (
 		<ModalForm>
 			<S.FormItemWrap>
-				<ModalFormInput error={error} inputType={"text"} placeHolderText={"일기장 이름"} />
+				<ModalFormInput error={error.state} inputType={"text"} placeHolderText={"일기장 이름"} />
 				<ModalFormBtn text={"확인"} />
 			</S.FormItemWrap>
-			{error && <ModalFormLabel text={error} />}
+			{error.state && <ModalFormLabel text={error.text} />}
 		</ModalForm>
 	);
 };
