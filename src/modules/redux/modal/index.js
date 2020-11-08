@@ -15,8 +15,11 @@ export const setError = (payload) => ({
 });
 
 const initialState = {
-	isShow: true,
-	error: "",
+	isShow: false,
+	error: {
+		state: false,
+		text: "",
+	},
 	modalElement: null,
 };
 
