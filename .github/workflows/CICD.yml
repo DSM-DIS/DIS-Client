@@ -55,4 +55,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ${{ secrets.AWS_REGION }} \
-            S3-Files s3://dsm-pick.com
+            S3-Files s3://diarystory.site
