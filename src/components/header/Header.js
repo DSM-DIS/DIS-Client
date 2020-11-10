@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { showModal } from "../../modules/redux/modal";
-import CodeModal from "../modal/Modal/Codemodal/CodeModal";
+import CodeModal from "../modal/Modal/CodeModal/CodeModal";
 import LogoutModal from "../modal/Modal/LogoutModal/LogoutModal";
 import * as S from "./styles";
 
