@@ -1,8 +1,8 @@
 import React from "react";
-import Register from "../../../Components/Login/Register/Register";
+import Register from "../../../components/login/Register/Register";
 
 const RegisterContainer = () => {
-  return <Register />;
+	return <Register />;
 };
 
 export default RegisterContainer;

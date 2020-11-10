@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../../Components/Login/Header/Header";
+import Header from "../../../components/login/Header/Header";
 
 const HeaderContainer = () => {
-  return <Header />;
+	return <Header />;
 };
 
 export default HeaderContainer;
