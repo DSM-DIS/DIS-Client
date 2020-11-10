@@ -25,9 +25,9 @@ export const ContentForm = styled.form`
 `;
 
 export const TextContent = styled.textarea`
-  width: 800px;
-  height: 360px;
-  font-size: 15pt;
+  width: 50rem;
+  height: 22.5rem;
+  font-size: 1.3rem;
   border: none;
   outline: none;
   resize: none;
@@ -35,11 +35,11 @@ export const TextContent = styled.textarea`
     width: 6px;
   }
   &::-webkit-scrollbar-track {
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     background-color: #ffe3e3;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     background-color: #ff9d9d;
   }
   &::-webkit-scrollbar-button {
@@ -52,17 +52,21 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100px;
-  height: 200px;
+  width: 6.25rem;
+  height: 12.5rem;
 `;
 
 export const Button = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 50%;
-  background: #ff9d9d;
-  margin: 0 auto;
+  background: #fff;
+  margin-left: 4rem;
 `;
+
+export const Img = styled.img`
+  width: 3.125rem;
+  height: 3.125rem
+`
