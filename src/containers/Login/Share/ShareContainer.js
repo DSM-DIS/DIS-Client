@@ -1,8 +1,8 @@
 import React from "react";
-import Share from "../../../Components/Login/Share/Share";
+import Share from "../../../components/login/Share/Share";
 
 const ShareContainer = () => {
-  return <Share />;
+	return <Share />;
 };
 
 export default ShareContainer;

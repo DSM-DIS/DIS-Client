@@ -1,4 +1,4 @@
-export const DIARY_SEVICE = {
+export const DIARY_SERVICE = {
 	GET_DIARY_PAGE: (id, page) => {
 		return `/diary-book/${id}/diary/${page}`;
 	},
