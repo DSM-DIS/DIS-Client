@@ -1,5 +1,7 @@
 const SET_DIARY_BOOK_LIST = "diary_list/SET_DIARY_BOOK_LIST";
 
+export const CREATE_NEW_DIARY_BOOK_SAGA = "diary_list/CREATE_NEW_DIARY_BOOK_SAGA";
+export const JOIN_DIARY_BOOK_BY_CODE_SAGA = "diary_list/JOIN_DIARY_BOOK_BY_CODE_SAGA";
 export const GET_DIARY_BOOK_LIST_SAGA = "diary_list/GET_DIARY_BOOK_LIST_SAGA";
 
 export const setDiaryBookList = (payload) => ({
