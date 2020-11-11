@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { generateMedia } from "styled-media-query";
+
+const customMedia = generateMedia({
+	schoolLaptop: '1538px',
+	monitor: '1918px'
+})
 
 export const Warp = styled.div`
   clear: both;
@@ -6,6 +12,9 @@ export const Warp = styled.div`
   width: 900px;
   margin: 0 auto;
   justify-content: space-between;
+  ${customMedia.greaterThan('monitor')`
+    width: 1100px;
+  `}
 `;
 
 export const Button = styled.button`
@@ -19,12 +28,16 @@ export const Button = styled.button`
   margin-top: 10px;
   outline: none;
   cursor: pointer;
-
   &:hover {
     background: #ff9d9d;
     color: white;
     transition: 0.3s;
   }
+  ${customMedia.greaterThan('monitor')`
+    width: 130px;
+    height: 50px;
+    font-size: 1.2rem;
+  `}
 `;
 
 export const ModalWarpper = styled.div`

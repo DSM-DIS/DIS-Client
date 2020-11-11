@@ -7,8 +7,8 @@ const DiaryBody = () => {
   return (
     <S.ContentWarpper>
       <S.ContentForm>
-        {/* <Write /> */}
-        <Read />
+        <Write />
+        {/* <Read /> */}
       </S.ContentForm>
       <S.ButtonWrapper>
         <S.Button><S.Img src="/src/asset/diaryWrite/writeUpArrow.png"/></S.Button>

@@ -1,4 +1,10 @@
 import styled from "styled-components"
+import { generateMedia } from "styled-media-query";
+
+const customMedia = generateMedia({
+	schoolLaptop: '1538px',
+	monitor: '1918px'
+})
 
 export const TextContent = styled.textarea`
   width: 50rem;
@@ -22,4 +28,7 @@ export const TextContent = styled.textarea`
     width: 0;
     height: 0;
   }
+  ${customMedia.greaterThan('monitor')`
+      width: 63rem;
+  `}
 `;

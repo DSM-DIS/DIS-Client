@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { generateMedia } from "styled-media-query";
+
+const customMedia = generateMedia({
+	schoolLaptop: '1538px',
+	monitor: '1918px'
+})
 
 export const ContentWarpper = styled.div`
   display: flex;
@@ -9,6 +15,9 @@ export const ContentWarpper = styled.div`
   margin-top: 10px;
   justify-content: center;
   align-items: center;
+  ${customMedia.greaterThan('monitor')`
+    width: 1300px;
+  `}
 `;
 
 export const ContentForm = styled.form`
@@ -22,6 +31,10 @@ export const ContentForm = styled.form`
   margin-right: -1px;
   justify-content: center;
   align-items: center;
+  ${customMedia.greaterThan('monitor')`
+    width: 1100px;
+    
+  `}
 `;
 
 export const TextContent = styled.textarea`
@@ -46,6 +59,9 @@ export const TextContent = styled.textarea`
     width: 0;
     height: 0;
   }
+  ${customMedia.greaterThan('monitor')`
+    width: 52rem;
+  `}
 `;
 
 export const ButtonWrapper = styled.div`
@@ -62,7 +78,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  background: #fff;
+  background: none;
   margin-left: 4rem;
 `;
 

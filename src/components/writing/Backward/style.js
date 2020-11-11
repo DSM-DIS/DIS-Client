@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackwardBtn = styled.button`
-  background: #fff;
+  background:none;
   width: 3.75rem;
   height: 3.75rem;
   float: left;
