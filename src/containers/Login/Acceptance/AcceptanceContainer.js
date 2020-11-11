@@ -1,8 +1,8 @@
 import React from "react";
-import Acceptance from "../../../Components/Login/Acceptance/Acceptance";
+import Acceptance from "../../../components/login/Acceptance/Acceptance";
 
 const AcceptanceContainer = () => {
-  return <Acceptance />;
+	return <Acceptance />;
 };
 
 export default AcceptanceContainer;

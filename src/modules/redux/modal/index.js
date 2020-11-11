@@ -2,6 +2,8 @@ const SHOW_MODAL = "modal/SHOW_MODAL";
 const DROP_MODAL = "modal/DROP_MODAL";
 const SET_ERROR = "modal/SET_ERROR";
 
+export const GET_ERROR_SAGA = "modal/GET_ERROR_SAGA";
+
 export const showModal = (payload) => ({
 	type: SHOW_MODAL,
 	payload,

@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../../Components/Login/Footer/Footer";
+import Footer from "../../../components/login/Footer/Footer";
 
 const FooterContainer = () => {
-  return <Footer />;
+	return <Footer />;
 };
 
 export default FooterContainer;
