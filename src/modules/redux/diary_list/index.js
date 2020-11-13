@@ -9,6 +9,18 @@ export const setDiaryBookList = (payload) => ({
 	payload,
 });
 
+export const createNewDiaryBookSaga = (payload) => ({
+	type: CREATE_NEW_DIARY_BOOK_SAGA,
+	payload,
+});
+export const joinDiaryBookByCodeSaga = (payload) => ({
+	type: JOIN_DIARY_BOOK_BY_CODE_SAGA,
+	payload,
+});
+export const getDiaryBookListSaga = () => ({
+	type: GET_DIARY_BOOK_LIST_SAGA,
+});
+
 const initialState = {
 	diaryList: [],
 };
