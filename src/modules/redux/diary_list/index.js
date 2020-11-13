@@ -35,7 +35,7 @@ const diaryListReducer = (state = initialState, action) => {
 		}
 		default: {
 			return {
-				state,
+				...state,
 			};
 		}
 	}
