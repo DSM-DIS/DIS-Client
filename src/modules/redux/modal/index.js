@@ -1,6 +1,6 @@
-const SHOW_MODAL = "modal/SHOW_MODAL";
-const DROP_MODAL = "modal/DROP_MODAL";
-const SET_ERROR = "modal/SET_ERROR";
+export const SHOW_MODAL = "modal/SHOW_MODAL";
+export const DROP_MODAL = "modal/DROP_MODAL";
+export const SET_ERROR = "modal/SET_ERROR";
 
 export const GET_ERROR_SAGA = "modal/GET_ERROR_SAGA";
 
@@ -44,7 +44,10 @@ const modalReducer = (state = initialState, action) => {
 		case SET_ERROR: {
 			return {
 				...state,
-				error: action.payload,
+				error: {
+					state: action.payload.state,
+					text: action.payload.text,
+				},
 			};
 		}
 		default: {
