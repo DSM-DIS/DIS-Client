@@ -12,6 +12,9 @@ const RegisterBox = () => {
 		password: "",
 	});
 
+	const dispatch = useDispatch();
+	const modalOn = useCallback((Modal) => dispatch(showModal(Modal)), [dispatch]);
+
 	const onChangeForm = useCallback(
 		(e) => {
 			setLocalLoginForm({
@@ -26,9 +29,6 @@ const RegisterBox = () => {
 		dispatch(setLoginForm(localLoginForm));
 		dispatch(submitLoginForm(true));
 	}, [dispatch]);
-
-	const dispatch = useDispatch();
-	const modalOn = useCallback((Modal) => dispatch(showModal(Modal)), [dispatch]);
 
 	return (
 		<S.MainWrapper>
