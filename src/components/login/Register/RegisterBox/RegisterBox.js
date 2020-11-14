@@ -6,6 +6,7 @@ import { showModal } from "../../../../modules/redux/modal";
 import RegisterModal from "../../../modal/Modal/RegisterModal/RegisterModal";
 
 const RegisterBox = () => {
+	// 컴포넌트 내부 loginForm과 redux loginForm이 존재
 	const [localLoginForm, setLocalLoginForm] = useState({
 		id: "",
 		password: "",
