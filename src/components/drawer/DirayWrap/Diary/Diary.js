@@ -3,6 +3,7 @@ import * as S from "./styles";
 import { useDispatch } from "react-redux";
 import { showModal } from "../../../../modules/redux/modal";
 import DiaryModal from "../../../modal/Modal/DiaryModal/DiaryModal";
+import { setDiaryAll } from "../../../../modules/redux/diary_info";
 
 const Diary = (props) => {
 	const { mode, diary } = props;
@@ -10,7 +11,13 @@ const Diary = (props) => {
 	// const { id, name, code, owner } = diary;
 
 	const dispatch = useDispatch();
-	const modalOn = useCallback((modal) => dispatch(showModal(modal)), [dispatch]);
+	const modalOn = useCallback(
+		(modal) => {
+			// dispatch(setDiaryAll({id, name, code, owner}));
+			dispatch(showModal(modal));
+		},
+		[dispatch],
+	);
 
 	const { default: img } = require("../../../../asset/diary/createDiaryBtn.svg");
 

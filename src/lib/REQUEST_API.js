@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://DIaryStory.com";
+const BASE_URL = "https://api.DIaryStory.site";
 
 const ACCESS_TOKEN_NAME = "Authorization";
 const ACCESS_TOKEN = "accessToken";
