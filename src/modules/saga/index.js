@@ -1,8 +1,8 @@
 import { all } from "redux-saga/effects";
-import diaryList from "./diary_list";
+import diaryListSaga from "./diary_list";
 
 function* rootSaga() {
-	yield all([diaryList]);
+	yield all([diaryListSaga()]);
 }
 
 export default rootSaga;
