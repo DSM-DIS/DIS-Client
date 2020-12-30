@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
-import diaryList from "../redux/diary_list";
-import diaryInfo from "../redux/diary_info";
-import modal from "../redux/modal";
+import auth from "./auth";
+import diaryList from "./diary_list";
+import diaryInfo from "./diary_info";
+import modal from "./modal";
 
 const rootReducer = combineReducers({
+	auth,
 	diaryList,
 	diaryInfo,
 	modal,
