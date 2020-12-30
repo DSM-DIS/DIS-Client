@@ -23,7 +23,7 @@ export const FormButtonInput = styled.input`
 	width: calc(80% - 10px);
 	height: 50px;
 	border-radius: 9px;
-	border: 2px solid #ff0000;
+	border: ${(props) => (props.isError ? "2px solid #ff0000" : "2px solid #D4D4D4")};
 	font-size: 20px;
 	font-weight: bolder;
 	padding-left: 10px;
@@ -45,27 +45,21 @@ export const FormErrorText = styled.p`
 	width: 100%;
 	height: 10px;
 	font-size: 10px;
+	margin-left: 10px;
 	margin-bottom: 20px;
 	color: #ff2a2a;
+	visibility: ${(props) => (props.isError ? "visible" : "hidden")};
 `;
 
 export const FormInput = styled.input`
 	width: calc(100% - 10px);
 	height: 50px;
 	border-radius: 9px;
-	border: 1px solid #d4d4d4;
+	border: ${(props) => (props.isError ? "2px solid #ff0000" : "2px solid #d4d4d4")};
 	font-size: 20px;
 	font-weight: bolder;
 	padding-left: 10px;
 	display: block;
-	font-size: 20px;
-
-	:nth-child(3) {
-		margin-bottom: 30px;
-	}
-	:nth-child(4) {
-		border: 2px solid #ff0000;
-	}
 `;
 
 export const FormSubmitButton = styled.button`
