@@ -1,15 +1,25 @@
+import { call, put, takeEvery } from "redux-saga/effects";
 import { AUTH } from "../../../lib/API";
 import { methodType, requestApiWithoutBodyWithToken } from "../../../lib/REQUEST_API";
+import { GET_AUTH_INFO_SAGA, setAuthInfoName } from "../../redux/auth";
 
 function* getAuthInfo() {
 	try {
 		const REQUEST_URL = AUTH.GET_INFO_BY_ACCESS();
-		const METHOD = methodType.GET;
+		const HTTP_METHOD = methodType.GET;
 
-		const res = requestApiWithoutBodyWithToken(METHOD, REQUEST_URL);
+		const res = yield call(requestApiWithoutBodyWithToken, HTTP_METHOD, REQUEST_URL);
+
+		yield put(setAuthInfoName("a"));
 
 		console.log(res);
 	} catch (error) {
 		console.log(error);
 	}
 }
+
+function* authSaga() {
+	yield takeEvery(GET_AUTH_INFO_SAGA, getAuthInfo);
+}
+
+export default authSaga;
