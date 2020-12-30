@@ -18,7 +18,7 @@ function* getDiaryBookListSaga() {
 		const res = yield call(requestApiWithoutBodyWithToken, methodType.GET, REQUEST_URL);
 
 		console.log(res);
-		// yield put(setDiaryBookList(...res.data.diaryBooks));
+		yield put(setDiaryBookList(...res.data.diaryBooks));
 
 		console.log("Success getDiaryBookListSaga");
 	} catch (error) {
