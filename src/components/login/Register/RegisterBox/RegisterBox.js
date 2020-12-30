@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 import * as S from "./styles";
 import { useDispatch } from "react-redux";
-import { setLoginForm, submitLoginForm } from "../../../../modules/redux/login";
 import { showModal } from "../../../../modules/redux/modal";
 import RegisterModal from "../../../modal/Modal/RegisterModal/RegisterModal";
+import { requestApiWithBodyWithoutToken } from "../../../../lib/REQUEST_API";
 
 const RegisterBox = () => {
 	// 컴포넌트 내부 loginForm과 redux loginForm이 존재
@@ -21,14 +21,14 @@ const RegisterBox = () => {
 				...localLoginForm,
 				[e.target.name]: e.target.value,
 			});
+			console.log(localLoginForm);
 		},
 		[localLoginForm],
 	);
 
-	const onClickSubmitBtn = useCallback(() => {
-		dispatch(setLoginForm(localLoginForm));
-		dispatch(submitLoginForm(true));
-	}, [dispatch]);
+	const onClickSubmitBtn = async () => {
+		await requestApiWithBodyWithoutToken("post", "/auth", localLoginForm, {}).then((res) => console.log(res));
+	};
 
 	return (
 		<S.MainWrapper>
