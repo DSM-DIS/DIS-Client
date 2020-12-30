@@ -1,4 +1,4 @@
-import { put, takeEvery } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import { DIARY_SERVICE } from "../../../lib/API";
 import { methodType, requestApiWithBodyWithToken, requestApiWithoutBodyWithToken } from "../../../lib/REQUEST_API";
 import {
@@ -13,10 +13,12 @@ function* getDiaryBookListSaga() {
 	try {
 		const REQUEST_URL = DIARY_SERVICE.GET_DIARY_BOOK_LIST();
 
-		// const res = requestApiWithoutBodyWithToken(methodType.GET, REQUEST_URL);
-		//
-		// console.log(res);
-		// yield put(setDiaryBookList{...res.data.diaryBooks);
+		console.log("getDiaryBookListSaga");
+
+		const res = yield call(requestApiWithoutBodyWithToken, methodType.GET, REQUEST_URL);
+
+		console.log(res);
+		// yield put(setDiaryBookList(...res.data.diaryBooks));
 
 		console.log("Success getDiaryBookListSaga");
 	} catch (error) {
@@ -34,11 +36,11 @@ function* joinDiaryBookByCodeSaga(payload) {
 
 		const REQUEST_URL = DIARY_SERVICE.JOIN_DIARY_BOOK_BY_CODE();
 
-		// const res = requestApiWithBodyWithToken(methodType.POST, REQUEST_URL);
+		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL);
 
-		// console.log(res);
+		console.log(res);
 
-		// yield put(getDiaryBookListSaga());
+		yield put(getDiaryBookListSaga());
 		yield put(setError({ state: false, text: "" }));
 
 		console.log("Success joinDiaryBookListSaga");
@@ -63,11 +65,11 @@ function* createNewDiaryBookSaga(payload) {
 
 		const REQUEST_URL = DIARY_SERVICE.GET_DIARY_BOOK_LIST();
 
-		// const res = requestApiWithBodyWithToken(methodType.POST, REQUEST_URL, {name: payload.payload});
+		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL, { name: payload.payload });
 
-		// console.log(res);
+		console.log(res);
 
-		// yield put(getDiaryBookListSaga());
+		yield put(getDiaryBookListSaga());
 		yield put(setError({ state: false, text: "" }));
 		yield put(dropModal());
 
