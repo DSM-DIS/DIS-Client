@@ -1,7 +1,5 @@
 import React, { useState, useCallback } from "react";
 import * as S from "./styles";
-import { useDispatch } from "react-redux";
-import { setRegisterForm, submitRegisterForm } from "../../../../modules/redux/register";
 import ModalForm from "../ModalForm";
 
 const RegisterModalForm = () => {
@@ -10,8 +8,18 @@ const RegisterModalForm = () => {
 		name: "",
 		password: "",
 	});
-
-	const dispatch = useDispatch();
+	const [isError, setIsError] = useState({
+		id: false,
+		nickname: false,
+		password: true,
+		passwordConfirm: false,
+	});
+	const [errorText, setErrorText] = useState({
+		id: "",
+		nickname: "",
+		password: "",
+		passwordConfirm: "",
+	});
 
 	const onChangeForm = useCallback(
 		(e) => {
@@ -23,31 +31,49 @@ const RegisterModalForm = () => {
 		[localRegisterForm],
 	);
 
-	const onClickSubmitBtn = useCallback(() => {
-		dispatch(setRegisterForm(localRegisterForm));
-		dispatch(submitRegisterForm(true));
-	}, [dispatch]);
+	const onClickSubmitBtn = () => {
+		console.log("res");
+	};
 
 	return (
 		<ModalForm>
 			<S.BodyWrapper>
 				<S.FormInputWrapper>
 					<S.FormInputDiv>
-						<S.FormButtonInput name="id" placeholder="아이디" autoComplete="off" onChange={onChangeForm} />
+						<S.FormButtonInput
+							name="id"
+							placeholder="아이디"
+							autoComplete="off"
+							onChange={onChangeForm}
+							isError={isError.id}
+						/>
 						<S.FormButton>중복확인</S.FormButton>
 					</S.FormInputDiv>
-					<S.FormErrorText>이미 존재하는 아이디입니다.</S.FormErrorText>
+					<S.FormErrorText isError={isError.id}>{errorText.id}</S.FormErrorText>
 				</S.FormInputWrapper>
 				<S.FormInputWrapper>
 					<S.FormInputDiv>
-						<S.FormButtonInput name="name" placeholder="별명" autoComplete="off" onChange={onChangeForm} />
+						<S.FormButtonInput
+							name="name"
+							placeholder="별명"
+							autoComplete="off"
+							onChange={onChangeForm}
+							isError={isError.nickname}
+						/>
 						<S.FormButton>중복확인</S.FormButton>
 					</S.FormInputDiv>
-					<S.FormErrorText>이미 존재하는 별명입니다.</S.FormErrorText>
+					<S.FormErrorText isError={isError.nickname}>{errorText.nickname}</S.FormErrorText>
 				</S.FormInputWrapper>
-				<S.FormInput name="password" type="password" placeholder="비밀번호" onChange={onChangeForm} />
-				<S.FormInput type="password" placeholder="비밀번호 재확인" />
-				<S.FormErrorText>비밀번호가 일치하지 않습니다.</S.FormErrorText>
+				<S.FormInput
+					name="password"
+					type="password"
+					placeholder="비밀번호"
+					onChange={onChangeForm}
+					isError={isError.password}
+				/>
+				<S.FormErrorText isError={isError.password}>{errorText.password}</S.FormErrorText>
+				<S.FormInput type="password" placeholder="비밀번호 재확인" isError={isError.passwordConfirm} />
+				<S.FormErrorText isError={isError.passwordConfirm}>{errorText.passwordConfirm}</S.FormErrorText>
 				<S.FormSubmitButton onClick={onClickSubmitBtn}>가입하기</S.FormSubmitButton>
 			</S.BodyWrapper>
 		</ModalForm>
