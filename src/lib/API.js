@@ -18,7 +18,7 @@ export const DIARY_SERVICE = {
 
 export const AUTH = {
 	GET_INFO_BY_ACCESS: () => {
-		return `/auth`;
+		return `/user`;
 	},
 	LOG_IN: () => {
 		return `/auth`;
