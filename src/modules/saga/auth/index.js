@@ -10,7 +10,7 @@ function* getAuthInfo() {
 
 		const res = yield call(requestApiWithoutBodyWithToken, HTTP_METHOD, REQUEST_URL);
 
-		yield put(setAuthInfoName("a"));
+		yield put(setAuthInfoName(res.data.username));
 
 		console.log(res);
 	} catch (error) {
