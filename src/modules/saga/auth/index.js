@@ -5,7 +5,7 @@ import { GET_AUTH_INFO_SAGA, setAuthInfoName } from "../../redux/auth";
 
 function* getAuthInfo() {
 	try {
-		const REQUEST_URL = AUTH.GET_INFO_BY_ACCESS();
+		const REQUEST_URL = AUTH.GET_USER_NAME_BY_ACCESS();
 		const HTTP_METHOD = methodType.GET;
 
 		const res = yield call(requestApiWithoutBodyWithToken, HTTP_METHOD, REQUEST_URL);
