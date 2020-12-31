@@ -7,6 +7,8 @@ import DefaultDiary from "./Diary/DefaultDiary";
 const DirayWrap = () => {
 	const diaryList = useSelector((state) => state.diaryList.diaryList);
 
+	console.log(diaryList);
+
 	return (
 		<S.Container>
 			<DefaultDiary />
