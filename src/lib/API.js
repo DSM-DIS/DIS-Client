@@ -17,8 +17,11 @@ export const DIARY_SERVICE = {
 };
 
 export const AUTH = {
+	GET_USER_NAME_BY_ACCESS: () => {
+		return `/user/username`;
+	},
 	GET_INFO_BY_ACCESS: () => {
-		return `/auth`;
+		return `/user`;
 	},
 	LOG_IN: () => {
 		return `/auth`;

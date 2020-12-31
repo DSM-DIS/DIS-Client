@@ -1,16 +1,18 @@
 import React from "react";
 import * as S from "./styles.js";
-import DiaryWrap from "./DirayWrap/DirayWrap";
+import DiaryWrapContainer from "../../containers/Main/DiaryWrapContainer/DiaryWrapContainer.js";
 
-const Drawer = () => {
+const Drawer = (props) => {
+	const { username } = props;
+
 	return (
 		<S.MainWrap>
 			<S.MainHeader>
 				<S.MainHeaderText>
-					<S.UserName>{`아이유`}</S.UserName>님의 서랍장
+					<S.UserName>{username || `아린`}</S.UserName>님의 서랍장
 				</S.MainHeaderText>
 			</S.MainHeader>
-			<DiaryWrap />
+			<DiaryWrapContainer />
 		</S.MainWrap>
 	);
 };
