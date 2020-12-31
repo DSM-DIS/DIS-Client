@@ -17,22 +17,28 @@ export const methodType = {
 export const requestApiWithBodyWithoutToken = async (method, url, body, header) => {
 	try {
 		const res = await axios[method](BASE_URL + url, body, {
-			...header,
+			headers: {
+				...header,
+			},
 		});
+
+		return res;
 	} catch (error) {
-		console.log(error);
+		throw error.response;
 	}
 };
 
 export const requestApiWithoutBodyWithoutToken = async (method, url, header) => {
 	try {
 		const res = await axios[method](BASE_URL + url, {
-			...header,
+			headers: {
+				...header,
+			},
 		});
 
 		return res;
 	} catch (error) {
-		console.log(error);
+		throw error.response;
 	}
 };
 
@@ -41,13 +47,19 @@ export const requestApiWithoutBodyWithToken = async (method, url, header) => {
 		const accessToken = window.localStorage.getItem(ACCESS_TOKEN);
 
 		const res = await axios[method](BASE_URL + url, {
-			[ACCESS_TOKEN_NAME]: accessToken,
-			...header,
+			headers: {
+				[ACCESS_TOKEN_NAME]: accessToken,
+				...header,
+			},
 		});
+
+		console.log(res);
 
 		return res;
 	} catch (error) {
-		console.log(error);
+		console.log(error.response);
+
+		throw error.response;
 	}
 };
 
@@ -56,15 +68,75 @@ export const requestApiWithBodyWithToken = async (method, url, body, header) => 
 		const accessToken = window.localStorage.getItem(ACCESS_TOKEN);
 
 		const res = await axios[method](BASE_URL + url, body, {
-			[ACCESS_TOKEN_NAME]: accessToken,
-			...header,
+			headers: {
+				[ACCESS_TOKEN_NAME]: accessToken,
+				...header,
+			},
 		});
 
 		return res;
 	} catch (error) {
-		console.log(error);
+		console.log(error.response);
+
+		throw error.response;
 	}
 };
+
+// export const requestApiWithBodyWithoutToken = async (method, url, body, header) => {
+// 	try {
+// 		const res = await axios[method](BASE_URL + url, body, {
+// 			...header,
+// 		});
+
+// 		return res;
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
+
+// export const requestApiWithoutBodyWithoutToken = async (method, url, header) => {
+// 	try {
+// 		const res = await axios[method](BASE_URL + url, {
+// 			...header,
+// 		});
+
+// 		return res;
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
+
+// export const requestApiWithoutBodyWithToken = async (method, url, header) => {
+// 	try {
+// 		const accessToken = window.localStorage.getItem(ACCESS_TOKEN);
+
+// 		const res = await axios[method](BASE_URL + url, {
+// 			[ACCESS_TOKEN_NAME]: accessToken,
+// 			...header,
+// 		});
+
+// 		console.log(res);
+
+// 		return res;
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
+
+// export const requestApiWithBodyWithToken = async (method, url, body, header) => {
+// 	try {
+// 		const accessToken = window.localStorage.getItem(ACCESS_TOKEN);
+
+// 		const res = await axios[method](BASE_URL + url, body, {
+// 			[ACCESS_TOKEN_NAME]: accessToken,
+// 			...header,
+// 		});
+
+// 		return res;
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
 
 export const Logout = () => {
 	try {
