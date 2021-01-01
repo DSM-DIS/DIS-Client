@@ -56,7 +56,7 @@ export const FormInput = styled.input`
 	height: 50px;
 	border-radius: 9px;
 	border: ${(props) => (props.isError ? "2px solid #ff0000" : "2px solid #d4d4d4")};
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bolder;
 	padding-left: 10px;
 	display: block;
