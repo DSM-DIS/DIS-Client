@@ -15,7 +15,6 @@ function* getDiaryBookListSaga() {
 
 		const res = yield call(requestApiWithoutBodyWithToken, methodType.GET, REQUEST_URL);
 
-		console.log(res.data.diaryBooks);
 		yield put(setDiaryBookList(res.data.diaryBooks));
 	} catch (error) {
 		console.log(error);
@@ -33,14 +32,10 @@ function* joinDiaryBookByCodeSaga(payload) {
 
 		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL, { code: payload.payload });
 
-		console.log(res);
-
 		yield put({ type: GET_DIARY_BOOK_LIST_SAGA });
 		yield put(setError({ state: false, text: "" }));
-
-		console.log("Success joinDiaryBookListSaga");
+		yield put(dropModal());
 	} catch (error) {
-		console.log("Failed joinDiaryBookListSaga");
 		console.log(error);
 
 		switch (error.status) {
