@@ -8,7 +8,7 @@ const ShareModal = () => {
 		<Modal>
 			<ModalCloseBtn />
 			<ModalHeader text={"코드번호"} />
-			<ModalHeader text={"재활용해버리기!"}/>
+			<ModalHeader text={"GA1F45"}/>
 		</Modal>
 	);
 };
