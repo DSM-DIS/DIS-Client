@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MainWrapper = styled.div`
 	width: 400px;
@@ -28,11 +28,12 @@ export const LoginLabel = styled.p`
 `;
 
 export const LoginInput = styled.input`
-	width: 100%;
+	width: calc(100% - 10px);
 	height: 40px;
 	border: 1px solid #d4d4d4;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	padding-left: 10px;
 `;
 
 export const LoginButton = styled.button`
