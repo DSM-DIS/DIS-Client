@@ -8,9 +8,6 @@ const ModalWrapper = (props) => {
 	const { isShow, modalElement } = modalData;
 	const Modal = modalElement;
 
-	console.log("components/ModalWrappper : Modal");
-	console.log(Modal);
-
 	return <>{isShow && <S.Container onClick={ModalOff}>{Modal && <Modal />}</S.Container>}</>;
 };
 

@@ -13,16 +13,10 @@ function* getDiaryBookListSaga() {
 	try {
 		const REQUEST_URL = DIARY_SERVICE.GET_DIARY_BOOK_LIST();
 
-		console.log("getDiaryBookListSaga");
-
 		const res = yield call(requestApiWithoutBodyWithToken, methodType.GET, REQUEST_URL);
 
-		console.log(res);
 		yield put(setDiaryBookList(res.data.diaryBooks));
-
-		console.log("Success getDiaryBookListSaga");
 	} catch (error) {
-		console.log("Failed getDiaryBookListSaga");
 		console.log(error);
 	}
 }
@@ -36,16 +30,12 @@ function* joinDiaryBookByCodeSaga(payload) {
 
 		const REQUEST_URL = DIARY_SERVICE.JOIN_DIARY_BOOK_BY_CODE();
 
-		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL);
-
-		console.log(res);
+		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL, { code: payload.payload });
 
 		yield put({ type: GET_DIARY_BOOK_LIST_SAGA });
 		yield put(setError({ state: false, text: "" }));
-
-		console.log("Success joinDiaryBookListSaga");
+		yield put(dropModal());
 	} catch (error) {
-		console.log("Failed joinDiaryBookListSaga");
 		console.log(error);
 
 		switch (error.status) {
@@ -67,15 +57,11 @@ function* createNewDiaryBookSaga(payload) {
 
 		const res = yield call(requestApiWithBodyWithToken, methodType.POST, REQUEST_URL, { name: payload.payload });
 
-		// console.log(res);
-
 		yield put({ type: GET_DIARY_BOOK_LIST_SAGA });
 		yield put(setError({ state: false, text: "" }));
+		alert(`초대 코드는 ${res.data.inviteCode}입니다.`);
 		yield put(dropModal());
-
-		console.log("Success createNewDiaryBookSaga");
 	} catch (error) {
-		console.log("Failed createNewDiaryBookSaga");
 		console.log(error);
 	}
 }

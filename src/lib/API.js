@@ -12,7 +12,7 @@ export const DIARY_SERVICE = {
 		return `/diary-book`;
 	},
 	JOIN_DIARY_BOOK_BY_CODE: () => {
-		return `/diary-book/participaint`;
+		return `/diary-book/participant`;
 	},
 };
 
