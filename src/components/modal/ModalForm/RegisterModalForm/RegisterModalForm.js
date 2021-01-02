@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import * as S from "./styles";
 import ModalForm from "../ModalForm";
 import { requestApiWithBodyWithoutToken } from "../../../../lib/REQUEST_API";
+import { Register } from "../../../../lib/LOG";
 
 const RegisterModalForm = () => {
 	// registerForm
@@ -53,7 +54,7 @@ const RegisterModalForm = () => {
 					break;
 				}
 				// 아이디 형식 검사
-				const regExp = new RegExp(/^[a-zA-Z0-9]{6,12}$/g);
+				const regExp = new RegExp(/^[a-zA-Z0-9]{8,12}$/g);
 				if (regExp.test(localRegisterForm.id) === false) {
 					setIsError({ ...isError, id: true });
 					setErrorText({
@@ -120,7 +121,6 @@ const RegisterModalForm = () => {
 
 	const checkNoError = () => {
 		for (let [key, value] of Object.entries(isOkay)) {
-			console.log(key, value);
 			if (value === false) return false;
 		}
 		return true;
@@ -139,8 +139,12 @@ const RegisterModalForm = () => {
 		}
 		// 비밀번호 확인과 같은지 검사
 		if ((localRegisterForm.password === localRegisterForm.passwordConfirm) === false) {
-			console.log(localRegisterForm);
-			alert("비밀번호");
+			setIsError({ ...isError, passwordConfirm: true });
+			setErrorText({
+				...errorText,
+				passwordConfirm: "비밀번호가 일치하지 않습니다.",
+			});
+			return;
 		}
 		// 서버 로직
 		if (checkNoError()) {
@@ -154,10 +158,10 @@ const RegisterModalForm = () => {
 				},
 				{},
 			).then((res) => {
-				console.log(res);
 				switch (res.status) {
 					case 200: {
-						alert("회원가입에 성공하셨습니다.");
+						setIsError({ id: false, nickname: false, password: false, passwordConfirm: false });
+						Register();
 						break;
 					}
 					case 403: {
