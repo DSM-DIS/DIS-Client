@@ -1,7 +1,7 @@
 export const Login = (accessToken, refreshToken) => {
 	try {
-		window.localStorage.setItem("ACCESS_TOKEN", accessToken);
-		window.localStorage.setItem("REFRESH_TOKEN", refreshToken);
+		window.localStorage.setItem("accessToken", accessToken);
+		window.localStorage.setItem("refreshToken", refreshToken);
 	} catch (error) {
 		console.log(error);
 	} finally {
@@ -12,8 +12,8 @@ export const Login = (accessToken, refreshToken) => {
 
 export const Logout = () => {
 	try {
-		!!window.localStorage.getItem(ACCESS_TOKEN) && window.localStorage.removeItem(ACCESS_TOKEN);
-		!!window.localStorage.getItem(REFRESH_TOKEN) && window.localStorage.removeItem(REFRESH_TOKEN);
+		!!window.localStorage.getItem(accessToken) && window.localStorage.removeItem(ACCESS_TOKEN);
+		!!window.localStorage.getItem(refreshToken) && window.localStorage.removeItem(REFRESH_TOKEN);
 	} catch (error) {
 		console.log(error);
 	} finally {
