@@ -9,12 +9,14 @@ import DiaryUserContainer from './DiaryUser/DiaryUserContainer';
 const WritingContainer = () => {
 	return (
 		<Fragment>
-			<HeaderContainer />
-			<BackwardContainer />
-			<DiaryHeaderContainer />
-			<DiaryBodyContainer />
-			<DiaryUserContainer />
-			<DiaryButtonContainer />
+			<div style={{background:'#fff5fa', height:'100%'}}>
+				<HeaderContainer />
+				<BackwardContainer />
+				<DiaryHeaderContainer />
+				<DiaryBodyContainer />
+				<DiaryUserContainer />
+				<DiaryButtonContainer />
+			</div>
 		</Fragment>
 	);
 };

@@ -1,28 +1,18 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 import * as S from "./style";
+import {showModal} from "../../../../modules/redux/modal/index"
+import { useDispatch } from "react-redux";
+import ShareModal from "../../../modal/Modal/ShareModal/ShareModal"
 
-const Button = ({ code }) => {
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const openModal = () => {
-    setModalVisible(true);
-  };
-
-  const closeModal = () => {
-    setModalVisible(false);
-  };
+const Button = ({type}) => {
+  const dispatch = useDispatch();
+	const modalOn = useCallback((Modal) => dispatch(showModal(Modal)), [dispatch]);
 
   return (
     <>
-      <S.ModalOverlay visible={modalVisible} />
-      <S.ModalWarpper tabIndex="-1" visible={modalVisible}>
-        <S.ModalInner tabIndex="0">
-          <S.CloseBtn onClick={closeModal}>X</S.CloseBtn>
-          <S.ModalCode>{code}</S.ModalCode>
-        </S.ModalInner>
-      </S.ModalWarpper>
       <S.Warp>
-        <S.Button onClick={openModal}>공유</S.Button>
+      {/* type으로 교환 버튼 활성화/비활성화 정한다. */}
+        <S.Button onClick={() => modalOn(ShareModal)}>공유</S.Button>
         <S.Button>교환</S.Button>
       </S.Warp>
     </>

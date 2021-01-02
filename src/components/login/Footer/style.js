@@ -16,6 +16,7 @@ export const FooterAdsWrapper = styled.div`
 export const FooterAds = styled.h1`
   font-size: 45px;
   color: #5e5e5e;
+  white-space: pre-wrap;
 `;
 
 export const FooterPolicyWrapper = styled.div`

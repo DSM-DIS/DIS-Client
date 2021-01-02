@@ -18,6 +18,7 @@ export const Title = styled.h1`
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 30px;
+  white-space: pre-wrap;
 `;
 
 export const Explanation = styled.p`
@@ -25,4 +26,5 @@ export const Explanation = styled.p`
   font-size: 18px;
   font-weight: bold;
   color: #a1a1a1;
+  white-space: pre-wrap;
 `;
